@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -72,7 +72,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Muse',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -146,6 +146,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -162,6 +172,16 @@
               <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -282,117 +302,17 @@
       
         
           
-            <h1 id="安装vmware-tools"><a href="#安装vmware-tools" class="headerlink" title="安装vmware-tools"></a>安装vmware-tools</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo su -</span><br><span class="line">sudo ./vmware-install.pl <span class="operator">-d</span></span><br></pre></td></tr></table></figure>
-<h1 id="修改更新源"><a href="#修改更新源" class="headerlink" title="修改更新源"></a>修改更新源</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>阿里云更新源<br>deb <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="external">http://mirrors.aliyun.com/ubuntu/</a> vivid main restricted universe multiverse<br>deb <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="external">http://mirrors.aliyun.com/ubuntu/</a> vivid-security main restricted universe multiverse<br>deb <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="external">http://mirrors.aliyun.com/ubuntu/</a> vivid-updates main restricted universe multiverse<br>deb <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="external">http://mirrors.aliyun.com/ubuntu/</a> vivid-proposed main restricted universe multiverse<br>deb <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="external">http://mirrors.aliyun.com/ubuntu/</a> vivid-backports main restricted universe multiverse<br>deb-src <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="external">http://mirrors.aliyun.com/ubuntu/</a> vivid main restricted universe multiverse<br>deb-src <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="external">http://mirrors.aliyun.com/ubuntu/</a> vivid-security main restricted universe multiverse<br>deb-src <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="external">http://mirrors.aliyun.com/ubuntu/</a> vivid-updates main restricted universe multiverse<br>deb-src <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="external">http://mirrors.aliyun.com/ubuntu/</a> vivid-proposed main restricted universe multiverse<br>deb-src <a href="http://mirrors.aliyun.com/ubuntu/" target="_blank" rel="external">http://mirrors.aliyun.com/ubuntu/</a> vivid-backports main restricted universe multiverse</p>
-</blockquote>
-<h1 id="删除无用软件包"><a href="#删除无用软件包" class="headerlink" title="删除无用软件包"></a>删除无用软件包</h1><h2 id="删除libreoffice"><a href="#删除libreoffice" class="headerlink" title="删除libreoffice"></a>删除libreoffice</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove libreoffice-common</span><br></pre></td></tr></table></figure>
-<h2 id="删除Amazon的链接"><a href="#删除Amazon的链接" class="headerlink" title="删除Amazon的链接"></a>删除Amazon的链接</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove unity-webapps-common</span><br></pre></td></tr></table></figure>
-<h2 id="删掉基本不用的自带软件"><a href="#删掉基本不用的自带软件" class="headerlink" title="删掉基本不用的自带软件"></a>删掉基本不用的自带软件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku  landscape-client-ui-install  onboard deja-dup</span><br></pre></td></tr></table></figure>
-<h1 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h1><h2 id="安装Chrome"><a href="#安装Chrome" class="headerlink" title="安装Chrome"></a>安装Chrome</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</span><br><span class="line">sudo dpkg -i google-chrome-stable_current_amd64.deb   </span><br><span class="line">sudo apt-get <span class="operator">-f</span> install</span><br></pre></td></tr></table></figure>
-<h2 id="安装搜狗输入法"><a href="#安装搜狗输入法" class="headerlink" title="安装搜狗输入法"></a>安装搜狗输入法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:fcitx-team/nightly</span><br><span class="line">sudo apt-get update  </span><br><span class="line">sudo apt-get install fcitx fcitx-sogoupinyin</span><br><span class="line">sudo apt-get install sogoupinyin</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install fcitx libssh2-<span class="number">1</span></span><br><span class="line">wget <span class="string">"http://pinyin.sogou.com/linux/download.php?f=linux&amp;bit=64"</span> -O <span class="string">"sougou_64.deb"</span></span><br><span class="line">sudo dpkg -i sougou_64.deb</span><br></pre></td></tr></table></figure>
-<h2 id="安装WPS"><a href="#安装WPS" class="headerlink" title="安装WPS"></a>安装WPS</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install wps-office</span><br></pre></td></tr></table></figure>
-<h2 id="安装Java"><a href="#安装Java" class="headerlink" title="安装Java"></a>安装Java</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:webupd8team/java    </span><br><span class="line">sudo apt-get update    </span><br><span class="line">sudo apt-get install oracle-java8-installer</span><br></pre></td></tr></table></figure>
-<h3 id="配置JDK环境变量"><a href="#配置JDK环境变量" class="headerlink" title="配置JDK环境变量"></a>配置JDK环境变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/usr/java/jdk1.<span class="number">8.0</span>_51</span><br><span class="line"><span class="built_in">export</span> JRE_HOME=<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib:<span class="variable">$&#123;JRE_HOME&#125;</span>/lib</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
-<h3 id="配置默认Java使用哪个"><a href="#配置默认Java使用哪个" class="headerlink" title="配置默认Java使用哪个"></a>配置默认Java使用哪个</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-alternatives –config java</span><br></pre></td></tr></table></figure>
-<h2 id="安装Sublime-Text3"><a href="#安装Sublime-Text3" class="headerlink" title="安装Sublime Text3"></a>安装Sublime Text3</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:webupd8team/sublime-text-<span class="number">3</span>    </span><br><span class="line">sudo apt-get update    </span><br><span class="line">sudo apt-get install sublime-text</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libgtk2.<span class="number">0</span>-<span class="number">0</span>:i386</span><br></pre></td></tr></table></figure>
-<h2 id="安装SSH服务"><a href="#安装SSH服务" class="headerlink" title="安装SSH服务"></a>安装SSH服务</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssh-server</span><br><span class="line">sudo vi /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注释 ：PermitRootLogin without-password<br>  新增 ：PermitRootLogin yes</p>
-<h3 id="解决SSH连接慢的问题"><a href="#解决SSH连接慢的问题" class="headerlink" title="解决SSH连接慢的问题"></a>解决SSH连接慢的问题</h3><ul>
-<li>调试办法：<br><code>ssh -v  host</code>  查看调试信息<br><code>time ssh root@host exit</code></li>
-<li>解决办法</li>
-</ul>
-<ol>
-<li>关闭DNS反向解析<br><code>vi /etc/ssh/sshd_config</code> 增加或修改 <code>UseDNS=no</code></li>
-<li>关闭SERVER上的GSS认证<br><code>vi /etc/ssh/sshd_config</code> 修改 <code>GSSAPIAuthentication no</code></li>
-<li>修改resolv.conf文件<br><code>vi /etc/resolv.conf</code>  删除所有不使用的IP</li>
-<li>修改hosts文件<br><code>vi /etc/hosts</code>文件中把客户端的IP和HOSTNAME加入</li>
-<li>打开SERVER上的IgnoreRhosts参数<br><code>vi /etc/ssh/sshd_config</code> 修改<code>IgnoreRhosts yes</code></li>
-<li>重启SSH服务<br><code>service sshd restart</code> 或 <code>/etc/init.d/ssh restart</code><h3 id="ssh免秘钥登录"><a href="#ssh免秘钥登录" class="headerlink" title="ssh免秘钥登录"></a>ssh免秘钥登录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa  -P <span class="string">""</span></span><br><span class="line">cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</blockquote>
-<h2 id="安装eclipse"><a href="#安装eclipse" class="headerlink" title="安装eclipse"></a>安装eclipse</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi  /usr/share/applications/eclipse.desktop</span><br></pre></td></tr></table></figure>
-<p>&gt;<br><strong><em> [Desktop Entry] </em></strong><br>Name=Eclipse 4<br>Type=Application<br>Exec=/home/liyi/develop/eclipse/eclipse<br>Terminal=false<br>Icon=/hom/liyi/develop/eclipse/icon.xpm<br>Comment=Integrated Development Environment<br>NoDisplay=false<br>Categories=Development;IDE;<br>Name[en]=Eclipse<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/soft/eclipse</span><br><span class="line">ln <span class="operator">-s</span> /usr/soft/java/jdk1.<span class="number">8.0</span>_51/jre jre</span><br></pre></td></tr></table></figure></p>
-<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git</span><br><span class="line">git config --global user.name <span class="string">"liyi"</span></span><br><span class="line">git config --global user.email <span class="string">"13991335588@139.com"</span></span><br></pre></td></tr></table></figure>
-<h2 id="安装gitbook"><a href="#安装gitbook" class="headerlink" title="安装gitbook"></a>安装gitbook</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">npm install -g gitbook-cli</span><br><span class="line"><span class="comment">#初始化book</span></span><br><span class="line">gitbook init</span><br><span class="line"><span class="comment">#开启本地预览</span></span><br><span class="line">gitbook serve</span><br><span class="line"><span class="comment">#输出内容到文件中</span></span><br><span class="line">gitbook build --output=/tmp/gitbook</span><br><span class="line"><span class="comment">#安装转换PDF插件</span></span><br><span class="line">sudo npm install gitbook-pdf -g</span><br><span class="line"><span class="comment">#安装依赖包</span></span><br><span class="line">sudo apt-get install calibre  </span><br><span class="line"><span class="comment">#安装报错时的解决办法</span></span><br><span class="line">sudo -v &amp;&amp; wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | sudo python -c <span class="string">"import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main()"</span></span><br><span class="line"></span><br><span class="line">gitbook -v <span class="number">2.1</span>.<span class="number">0</span> pdf</span><br></pre></td></tr></table></figure>
-<h2 id="安装vpnc"><a href="#安装vpnc" class="headerlink" title="安装vpnc"></a>安装vpnc</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install vpnc</span><br></pre></td></tr></table></figure>
-<h3 id="安装经典菜单指示器"><a href="#安装经典菜单指示器" class="headerlink" title="安装经典菜单指示器"></a>安装经典菜单指示器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:diesch/testing  </span><br><span class="line">sudo apt-get update  </span><br><span class="line">sudo apt-get install classicmenu-indicator</span><br></pre></td></tr></table></figure>
-<h3 id="安装系统指示器SysPeek"><a href="#安装系统指示器SysPeek" class="headerlink" title="安装系统指示器SysPeek"></a>安装系统指示器SysPeek</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:nilarimogard/webupd8    </span><br><span class="line">sudo apt-get update    </span><br><span class="line">sudo apt-get install syspeek</span><br></pre></td></tr></table></figure>
-<h3 id="安装Unity优化工具"><a href="#安装Unity优化工具" class="headerlink" title="安装Unity优化工具"></a>安装Unity优化工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install unity-tweak-tool</span><br></pre></td></tr></table></figure>
-<h3 id="安装vim"><a href="#安装vim" class="headerlink" title="安装vim"></a>安装vim</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install vim</span><br></pre></td></tr></table></figure>
-<h3 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h3><ul>
-<li><p>下载Mysql社区版<br>Linux - Generic (glibc 2.5) (x86, 64-bit), Compressed TAR Archive</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln <span class="operator">-s</span> mysql-<span class="number">5.6</span>.<span class="number">17</span>-linux-glibc2.<span class="number">5</span>-x86_64.tar.gz mysql</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装依赖库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libaio-dev</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>添加用户</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">groupadd mysql</span><br><span class="line">useradd -r -g mysql mysql</span><br><span class="line">chown -R mysql mysql</span><br><span class="line">chgrp -R mysql mysql</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装</span></span><br><span class="line">./scripts/mysql_install_db --user=mysql</span><br><span class="line"><span class="comment">#赋权操作</span></span><br><span class="line">chown -R root mysql</span><br><span class="line">chgrp -R mysql mysql/data</span><br><span class="line"><span class="comment">#复制mysql.server文件到/etc/init.d目录下</span></span><br><span class="line">cp support-files/mysql.server /etc/init.d/mysql</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#命令启动</span></span><br><span class="line">./bin/mysqld_safe --user=mysql --datadir=/usr/<span class="built_in">local</span>/mysql &amp;</span><br><span class="line"><span class="comment">#服务启动</span></span><br><span class="line">sudo service mysql start</span><br><span class="line"><span class="comment">#添加自启动</span></span><br><span class="line">sudo update-rc.d <span class="operator">-f</span> mysql defaults</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装mysql客户端</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-workbench</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="安装oh-zsh"><a href="#安装oh-zsh" class="headerlink" title="安装oh-zsh"></a>安装oh-zsh</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install zsh</span><br><span class="line">git <span class="built_in">clone</span> git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</span><br><span class="line">cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># &#20462;&#25913;~/.zshrc&#10;ZSH=$HOME/.oh-my-zsh&#10;export ZSH_THEME=&#34;robbyrussell&#34;&#10;plugins=(git node github svn git mvn docker bower sublime ubuntu python scala gulp)&#10;source $ZSH/oh-my-zsh.sh</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># &#20462;&#25913;robbyrussell&#20027;&#39064;&#10;PROMPT=&#39;%&#123;$fg_bold[red]%&#125;&#10140; %&#123;$fg_bold[green]%&#125;%p%&#123;$fg[cyan]%&#125;%d %&#123;$fg_bold[blue]%&#125;$(git_prompt_info)%&#123;$fg_bold[blue]%&#125;% %&#123;$reset_color%&#125;&#62;&#39;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># &#23433;&#35013;&#25554;&#20214;&#10;git clone git://github.com/joelthelion/autojump.git&#10;./install.py&#10;# &#28155;&#21152;&#35821;&#21477;&#21040;~/.zshrc&#10;[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] &#38;&#38; . ~/.autojump/etc/profile.d/autojump.sh</span><br></pre></td></tr></table></figure>
-<h1 id="系统配置"><a href="#系统配置" class="headerlink" title="系统配置"></a>系统配置</h1><h2 id="修改IP地址"><a href="#修改IP地址" class="headerlink" title="修改IP地址"></a>修改IP地址</h2><ul>
-<li>命令方式：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ifconfig eth0 IP地址 netmask 子网掩码</span><br><span class="line">sudo route add default gw 网关地址</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<p>设置DNS 修改/etc/resolv.conf 加入 nameserver DNS的地址1<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/networking restart</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<ul>
-<li>配置文件方式<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/network/interfaces</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<p>iface eth0 inet static<br>address 192.168.36.131<br>netmask 255.255.255.0<br>gateway 192.168.36.2<br>dns-nameservers 192.168.36.2<br>auto eth0<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/networking restart</span><br><span class="line">ifdown eth0 &amp;&amp; ifup eth0 `</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h2 id="自定义DNS"><a href="#自定义DNS" class="headerlink" title="自定义DNS"></a>自定义DNS</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/dhcp/dhclient.conf</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>添加<br>prepend domain-name-servers 8.8.8.8;<br>prepend domain-name-servers 223.5.5.5;  </p>
-<h2 id="挂载新硬盘"><a href="#挂载新硬盘" class="headerlink" title="挂载新硬盘"></a>挂载新硬盘</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看硬盘情况</span></span><br><span class="line">sudo lshw -C disk</span><br><span class="line">sudo fdisk <span class="operator">-l</span></span><br><span class="line"><span class="comment">#查看磁盘UUID</span></span><br><span class="line">sudo blkid</span><br><span class="line"><span class="comment">#分区</span></span><br><span class="line">sudo fdisk /dev/sdb</span><br><span class="line"><span class="comment">#格式化</span></span><br><span class="line">sudo mkfs -t ext4 /dev/sdb1</span><br><span class="line"><span class="comment">#挂载新硬盘</span></span><br><span class="line">sudo mount /dev/sdb1 /挂载目录</span><br><span class="line"><span class="comment">#修改fstab文件，自动挂载</span></span><br><span class="line">sudo vi /etc/fstab</span><br></pre></td></tr></table></figure>
-<p>添加一行<br>/dev/sdb1  /挂载目录  ext4 defaults 0 0</p>
-</blockquote>
-<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="查看系统信息"><a href="#查看系统信息" class="headerlink" title="查看系统信息"></a>查看系统信息</h2><h2 id="查看内核版本"><a href="#查看内核版本" class="headerlink" title="查看内核版本"></a>查看内核版本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -r</span><br></pre></td></tr></table></figure>
-<h2 id="查看系统版本"><a href="#查看系统版本" class="headerlink" title="查看系统版本"></a>查看系统版本</h2><p><code>cat /etc/issue</code><br><code>sudo lsb_release -a</code><br><code>uname --s  显示内核名字s</code><br><code>uname --r 显示内核版本</code><br><code>uname --n 显示网络主机名</code><br><code>uname --p 显示cpu</code><br><code>uname -m  显示位数</code></p>
-<h2 id="查看USB设备"><a href="#查看USB设备" class="headerlink" title="查看USB设备"></a>查看USB设备</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsusb</span><br></pre></td></tr></table></figure>
-<h2 id="查看网卡状态"><a href="#查看网卡状态" class="headerlink" title="查看网卡状态"></a>查看网卡状态</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ethtool eth0</span><br></pre></td></tr></table></figure>
-<h2 id="查看CPU信息"><a href="#查看CPU信息" class="headerlink" title="查看CPU信息"></a>查看CPU信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/cpuinfo</span><br></pre></td></tr></table></figure>
-<h2 id="显示当前硬件信息"><a href="#显示当前硬件信息" class="headerlink" title="显示当前硬件信息"></a>显示当前硬件信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lshw</span><br></pre></td></tr></table></figure>
-<h2 id="查看当前的内存使用情况"><a href="#查看当前的内存使用情况" class="headerlink" title="查看当前的内存使用情况"></a>查看当前的内存使用情况</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>
-<h2 id="软件操作"><a href="#软件操作" class="headerlink" title="软件操作"></a>软件操作</h2><h3 id="ubuntu卸载安装软件"><a href="#ubuntu卸载安装软件" class="headerlink" title="ubuntu卸载安装软件"></a>ubuntu卸载安装软件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove --purge</span><br></pre></td></tr></table></figure>
-<h3 id="查看软件xxx安装内容"><a href="#查看软件xxx安装内容" class="headerlink" title="查看软件xxx安装内容"></a>查看软件xxx安装内容</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg -L xxx</span><br></pre></td></tr></table></figure>
-<h3 id="查找软件"><a href="#查找软件" class="headerlink" title="查找软件"></a>查找软件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-cache search 正则表达式</span><br></pre></td></tr></table></figure>
-<h3 id="查询软件xxx依赖哪些包"><a href="#查询软件xxx依赖哪些包" class="headerlink" title="查询软件xxx依赖哪些包"></a>查询软件xxx依赖哪些包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-cache depends xxx</span><br></pre></td></tr></table></figure>
-<h3 id="系统升级"><a href="#系统升级" class="headerlink" title="系统升级"></a>系统升级</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br><span class="line">sudo apt-get dist-upgrade</span><br></pre></td></tr></table></figure>
-<h3 id="清理旧版本的软件缓存"><a href="#清理旧版本的软件缓存" class="headerlink" title="清理旧版本的软件缓存"></a>清理旧版本的软件缓存</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get autoclean</span><br></pre></td></tr></table></figure>
-<h3 id="清理所有软件缓存"><a href="#清理所有软件缓存" class="headerlink" title="清理所有软件缓存"></a>清理所有软件缓存</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get clean</span><br></pre></td></tr></table></figure>
-<h3 id="删除系统不再使用的孤立软件"><a href="#删除系统不再使用的孤立软件" class="headerlink" title="删除系统不再使用的孤立软件"></a>删除系统不再使用的孤立软件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get autoremove</span><br></pre></td></tr></table></figure>
-<h2 id="服务操作"><a href="#服务操作" class="headerlink" title="服务操作"></a>服务操作</h2><h3 id="添加一个服务"><a href="#添加一个服务" class="headerlink" title="添加一个服务"></a>添加一个服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-rc.d 服务名 defaults <span class="number">99</span></span><br></pre></td></tr></table></figure>
-<h3 id="删除一个服务"><a href="#删除一个服务" class="headerlink" title="删除一个服务"></a>删除一个服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-rc.d 服务名 remove</span><br></pre></td></tr></table></figure>
-<h3 id="临时重启一个服务"><a href="#临时重启一个服务" class="headerlink" title="临时重启一个服务"></a>临时重启一个服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/服务名 restart</span><br></pre></td></tr></table></figure>
-<h3 id="临时关闭一个服务"><a href="#临时关闭一个服务" class="headerlink" title="临时关闭一个服务"></a>临时关闭一个服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/服务名 stop</span><br></pre></td></tr></table></figure>
-<h3 id="临时启动一个服务"><a href="#临时启动一个服务" class="headerlink" title="临时启动一个服务"></a>临时启动一个服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/服务名 start</span><br></pre></td></tr></table></figure>
-<h2 id="解压到指定目录"><a href="#解压到指定目录" class="headerlink" title="解压到指定目录"></a>解压到指定目录</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">unzip 文件.zip <span class="operator">-d</span> 目标目录</span><br><span class="line">tar -xvf 文件.tar -C  目标目录</span><br></pre></td></tr></table></figure>
-<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="unmont提示device-is-busy"><a href="#unmont提示device-is-busy" class="headerlink" title="unmont提示device is busy"></a>unmont提示device is busy</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fuser -m /mnt/usbdisk    </span><br><span class="line">fuser -k /mnt/usbdisk</span><br></pre></td></tr></table></figure>
+          安装vmware-tools12sudo su -sudo ./vmware-install.pl -d
+修改更新源12cp /etc/apt/sources.list /etc/apt/sources.list.baksudo apt-get update
 
-          
+阿里云更新源deb http://mirrors.aliyun.com/ubuntu/ vivid main restricted universe multiversedeb http://mirrors.aliyun.com/ubuntu/ vivid-security main restricted universe multiversedeb http://mirrors.aliyun.com/ubuntu/ vivid-updates main restricted universe multiversedeb http://mirrors.aliyun.com/ubuntu/ vivid-proposed main restricted universe multiversedeb http://mirrors.al
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/15/Ubuntu学习笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -445,7 +365,7 @@
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/default_avatar.jpg"
+               src="http://tp4.sinaimg.cn/1732623423/180/39996983206/1"
                alt="liyi" />
           <p class="site-author-name" itemprop="name">liyi</p>
           <p class="site-description motion-element" itemprop="description">李毅的技术博客</p>
@@ -460,10 +380,10 @@
           
           
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories">
                 <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -522,7 +442,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Mist
   </a>
 </div>
 
